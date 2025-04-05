@@ -7,11 +7,11 @@ networks:
 services:
   ui:
     build:
-      context: /root/spti-health-mvc/
+      context: /var/lib/jenkins/workspace/spti-health-mvc
       dockerfile: Dockerfile
     container_name: my-ui
     ports:
-      - "8080:8080"
+      - "8082:8080"
     networks:
       - my-network
     depends_on:
@@ -20,7 +20,7 @@ services:
 
   api:
     build:
-      context: /root/spti-health-api/
+      context: /var/lib/jenkins/workspace/spti-health-api
       dockerfile: Dockerfile
     container_name: my-api
     environment:
