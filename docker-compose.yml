@@ -43,6 +43,6 @@ services:
       MYSQL_ROOT_PASSWORD: 12345678
       MYSQL_DATABASE: hospital
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       - my-network
